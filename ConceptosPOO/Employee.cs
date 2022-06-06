@@ -1,6 +1,6 @@
 ﻿namespace ConceptosPOO
 {
-    public abstract class Employee
+    public abstract class Employee: IPay
     {
 
         public int Id { get; set; }
@@ -15,7 +15,8 @@
 
         public bool IsActive { get; set; }
 
-        public abstract decimal GetValueToPay();// este metodo lo implementas las clases que heredan de la clase.
+        // este metodo lo implementan las clases que heredan de la clase.
+        public abstract decimal GetValueToPay();
 
         public override string ToString()
         {
